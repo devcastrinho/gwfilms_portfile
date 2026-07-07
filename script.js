@@ -111,6 +111,59 @@ document.querySelectorAll('[data-feature-video]').forEach(wrap=>{
   }
 });
 
+// WORK VIDEO TEASERS
+document.querySelectorAll('.work-teaser-video').forEach(video=>{
+  const duration=Number(video.dataset.teaserDuration || 8);
+  const playTeaser=()=>{
+    video.muted=true;
+    video.playsInline=true;
+    video.play().catch(()=>{});
+  };
+
+  video.addEventListener('loadedmetadata',()=>{
+    video.currentTime=0;
+    playTeaser();
+  });
+  video.addEventListener('timeupdate',()=>{
+    if(video.currentTime>=duration)video.currentTime=0;
+  });
+  video.addEventListener('ended',()=>{video.currentTime=0;playTeaser();});
+  playTeaser();
+});
+
+const videoModal=document.getElementById('videoModal');
+const videoModalPlayer=document.getElementById('videoModalPlayer');
+
+function openVideoModal(src){
+  if(!videoModal || !videoModalPlayer)return;
+  videoModalPlayer.src=src;
+  videoModal.classList.add('open');
+  videoModal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  videoModalPlayer.currentTime=0;
+  videoModalPlayer.play().catch(()=>{});
+}
+
+function closeVideoModal(){
+  if(!videoModal || !videoModalPlayer)return;
+  videoModal.classList.remove('open');
+  videoModal.setAttribute('aria-hidden','true');
+  videoModalPlayer.pause();
+  videoModalPlayer.removeAttribute('src');
+  videoModalPlayer.load();
+  document.body.style.overflow='';
+}
+
+document.querySelectorAll('[data-video-open]').forEach(card=>{
+  card.addEventListener('click',()=>openVideoModal(card.dataset.videoOpen));
+});
+document.querySelectorAll('[data-video-close]').forEach(el=>{
+  el.addEventListener('click',closeVideoModal);
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeVideoModal();
+});
+
 // MAGNETIC (desktop only)
 if(window.matchMedia('(hover:hover)').matches){
   document.querySelectorAll('.btn').forEach(btn=>{
@@ -126,5 +179,4 @@ if(window.matchMedia('(hover:hover)').matches){
     if(t)t.style.transform=`translate(${(e.clientX/window.innerWidth-.5)*4}px,${(e.clientY/window.innerHeight-.5)*2}px)`;
   });
 }
-
 

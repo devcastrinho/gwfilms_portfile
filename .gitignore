@@ -1,0 +1,6 @@
+*.mp4
+!media/*.mp4
+.idea/
+.agents/
+.codex/
+.git.placeholder-empty/
