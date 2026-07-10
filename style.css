@@ -237,8 +237,8 @@ body.theme-dark .theme-toggle-icon::after{transform:translate(-3px,3px);backgrou
 .contact p{font-size:.9rem;color:rgba(255,255,255,.4);margin-bottom:3rem;position:relative;}
 .contact-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
 .btn{display:inline-flex;align-items:center;gap:.65rem;padding:1rem 2rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:100px;font-family:'Inter',sans-serif;font-weight:500;transition:all .35s var(--ease);cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.btn-w{background:#fff;color:var(--black);}
-.btn-w:hover{background:var(--bg2);}
+.btn-w{background:#25d366;color:#06180c;border:1.5px solid #25d366;box-shadow:0 14px 34px rgba(37,211,102,.2);}
+.btn-w:hover{background:#1ebe5d;border-color:#1ebe5d;color:#06180c;box-shadow:0 18px 42px rgba(37,211,102,.28);}
 .btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25);}
 .btn-o:hover{border-color:#fff;background:rgba(255,255,255,.07);}
 .btn svg{width:16px;height:16px;flex-shrink:0;}
