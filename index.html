@@ -126,18 +126,14 @@
       </video>
       <div class="work-card-info"><h3>Unboxing</h3><p>Teaser · Vídeo</p></div>
     </button>
-    <article class="work-card work-photo-card work-photo-wide reveal">
-      <img src="media/flawed-produtos.jpg" alt="Camisetas da marca Flawed fotografadas sobre pedras" loading="lazy" decoding="async">
-      <div class="work-card-info"><h3>Flawed</h3><p>Produto · Fotografia</p></div>
-    </article>
-    <article class="work-card work-photo-card work-photo-portrait reveal d1">
+    <button class="work-card work-photo-card work-photo-cover reveal" type="button" data-gallery-open aria-label="Abrir galeria Flawed shooting com 3 fotos">
       <img src="media/flawed-editorial-dupla.jpg" alt="Editorial da Flawed com dois modelos usando camisetas da marca" loading="lazy" decoding="async">
-      <div class="work-card-info"><h3>Flawed</h3><p>Editorial · Fotografia</p></div>
-    </article>
-    <article class="work-card work-photo-card work-photo-portrait reveal d2">
-      <img src="media/flawed-editorial-retrato.jpg" alt="Retrato editorial de modelo usando camiseta da Flawed" loading="lazy" decoding="async">
-      <div class="work-card-info"><h3>Flawed</h3><p>Retrato · Fotografia</p></div>
-    </article>
+      <div class="work-card-info">
+        <h3>Flawed shooting</h3>
+        <p>Direção, captação, fotografia e edição</p>
+        <span class="work-gallery-cue">Ver ensaio · 3 fotos</span>
+      </div>
+    </button>
   </div>
 </section>
 
@@ -146,6 +142,36 @@
   <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Vídeo completo">
     <button class="video-modal-close" type="button" data-video-close aria-label="Fechar vídeo">×</button>
     <video class="video-modal-player" id="videoModalPlayer" controls playsinline preload="metadata"></video>
+  </div>
+</div>
+
+<div class="photo-modal" id="photoModal" aria-hidden="true">
+  <div class="photo-modal-backdrop" data-gallery-close></div>
+  <div class="photo-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="photoModalTitle">
+    <header class="photo-modal-header">
+      <div>
+        <h2 id="photoModalTitle">Flawed shooting</h2>
+        <p>Direção, captação, fotografia e edição</p>
+      </div>
+      <button class="photo-modal-close" type="button" data-gallery-close aria-label="Fechar galeria">×</button>
+    </header>
+    <div class="photo-modal-stage">
+      <button class="photo-modal-arrow photo-modal-prev" type="button" data-gallery-prev aria-label="Foto anterior">←</button>
+      <img id="photoModalImage" src="media/flawed-editorial-dupla.jpg" alt="Editorial da Flawed com dois modelos usando camisetas da marca">
+      <button class="photo-modal-arrow photo-modal-next" type="button" data-gallery-next aria-label="Próxima foto">→</button>
+      <span class="photo-modal-count" id="photoModalCount">1 / 3</span>
+    </div>
+    <div class="photo-modal-thumbs" aria-label="Escolher foto">
+      <button class="active" type="button" data-gallery-thumb data-src="media/flawed-editorial-dupla.jpg" data-alt="Editorial da Flawed com dois modelos usando camisetas da marca" aria-label="Ver foto 1">
+        <img src="media/flawed-editorial-dupla.jpg" alt="" loading="lazy">
+      </button>
+      <button type="button" data-gallery-thumb data-src="media/flawed-editorial-retrato.jpg" data-alt="Retrato editorial de modelo usando camiseta da Flawed" aria-label="Ver foto 2">
+        <img src="media/flawed-editorial-retrato.jpg" alt="" loading="lazy">
+      </button>
+      <button type="button" data-gallery-thumb data-src="media/flawed-produtos.jpg" data-alt="Camisetas da marca Flawed fotografadas sobre pedras" aria-label="Ver foto 3">
+        <img src="media/flawed-produtos.jpg" alt="" loading="lazy">
+      </button>
+    </div>
   </div>
 </div>
 
@@ -196,8 +222,6 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
 
 
 
