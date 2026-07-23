@@ -64,6 +64,26 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
+// STREET SECTION — scroll-driven atmosphere contained to this section
+const streetSection=document.querySelector('[data-street-section]');
+if(streetSection){
+  let streetFrame=0;
+  const updateStreetScene=()=>{
+    streetFrame=0;
+    const rect=streetSection.getBoundingClientRect();
+    const travel=window.innerHeight+rect.height;
+    const progress=Math.min(1,Math.max(0,(window.innerHeight-rect.top)/travel));
+    streetSection.style.setProperty('--street-progress',progress.toFixed(4));
+  };
+  const requestStreetUpdate=()=>{
+    if(streetFrame)return;
+    streetFrame=requestAnimationFrame(updateStreetScene);
+  };
+  updateStreetScene();
+  window.addEventListener('scroll',requestStreetUpdate,{passive:true});
+  window.addEventListener('resize',requestStreetUpdate);
+}
+
 // FEATURED VIDEO FALLBACK
 document.querySelectorAll('[data-feature-video]').forEach(wrap=>{
   const video=wrap.querySelector('video');
