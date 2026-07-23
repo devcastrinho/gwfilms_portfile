@@ -259,6 +259,7 @@ body.theme-dark .theme-toggle-icon::after{transform:translate(-3px,3px);backgrou
 .video-modal-player{width:100%;max-height:88svh;aspect-ratio:16/9;background:#000;border-radius:10px;object-fit:contain;box-shadow:0 28px 80px rgba(0,0,0,.4);}
 .video-modal-close{position:absolute;top:-3rem;right:0;width:2.4rem;height:2.4rem;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:1.7rem;line-height:1;display:grid;place-items:center;cursor:pointer;z-index:2;transition:background .25s,border-color .25s;}
 .video-modal-close:hover{background:rgba(255,255,255,.18);border-color:#fff;}
+.video-modal :focus-visible,.photo-modal :focus-visible{outline:3px solid #fff;outline-offset:3px;}
 
 .photo-modal{position:fixed;inset:0;z-index:920;display:grid;place-items:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease);}
 .photo-modal.open{opacity:1;pointer-events:auto;}
