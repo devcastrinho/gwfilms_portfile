@@ -183,38 +183,39 @@ body.theme-dark .theme-toggle-icon::after{transform:translate(-3px,3px);backgrou
 .street-feature::before{
   content:'';position:absolute;inset:-8%;z-index:-3;pointer-events:none;
   background:
-    radial-gradient(circle at 18% 25%,rgba(190,255,0,.1),transparent 25%),
-    radial-gradient(circle at 82% 78%,rgba(255,82,24,.1),transparent 24%),
+    radial-gradient(circle at 18% 25%,rgba(255,20,45,.17),transparent 27%),
+    radial-gradient(circle at 82% 78%,rgba(170,0,20,.2),transparent 26%),
     repeating-linear-gradient(98deg,rgba(255,255,255,.025) 0 1px,transparent 1px 19px),
-    linear-gradient(145deg,#151716 0%,#090a0a 52%,#171817 100%);
+    linear-gradient(145deg,#14080a 0%,#050505 52%,#19090c 100%);
   transform:scale(calc(1 + var(--street-progress) * .045)) rotate(calc((var(--street-progress) - .5) * 1deg));
   will-change:transform;
 }
 .street-feature::after{
   content:'';position:absolute;inset:0;z-index:-2;pointer-events:none;opacity:.36;
   background:
-    linear-gradient(115deg,transparent 0 47%,rgba(210,255,35,.14) 47% 47.5%,transparent 47.5% 100%),
+    linear-gradient(115deg,transparent 0 47%,rgba(255,25,48,.26) 47% 47.5%,transparent 47.5% 100%),
     repeating-linear-gradient(0deg,transparent 0 74px,rgba(255,255,255,.035) 74px 75px);
   clip-path:polygon(0 11%,100% 0,100% 91%,0 100%);
 }
 .street-atmosphere{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;font-family:'Syne',sans-serif;text-transform:uppercase;}
-.street-code{position:absolute;top:8.5rem;right:2rem;font-size:.62rem;font-weight:700;letter-spacing:.36em;color:#c9ff21;transform:translateY(calc((var(--street-progress) - .5) * -55px));}
-.street-word{position:absolute;left:-.04em;bottom:-.2em;font-size:clamp(10rem,29vw,30rem);font-weight:800;line-height:.72;letter-spacing:-.09em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.075);transform:translateX(calc((var(--street-progress) - .5) * -10vw));white-space:nowrap;}
+.street-code{position:absolute;top:8.5rem;right:2rem;font-size:.62rem;font-weight:700;letter-spacing:.36em;color:#ff2438;transform:translateY(calc((var(--street-progress) - .5) * -55px));}
+.street-word{position:absolute;left:-.02em;bottom:-.13em;font-family:'Rubik Spray Paint','Syne',sans-serif;font-size:clamp(8rem,24vw,25rem);font-weight:400;line-height:.72;letter-spacing:-.055em;color:rgba(214,0,27,.075);-webkit-text-stroke:1px rgba(255,36,56,.18);text-shadow:0 0 38px rgba(255,0,30,.08);transform:translateX(calc((var(--street-progress) - .5) * -10vw)) rotate(-2deg);white-space:nowrap;}
+.street-word::after{content:'';position:absolute;left:10%;right:8%;bottom:-.12em;height:.16em;background:repeating-linear-gradient(90deg,#e30613 0 3px,transparent 3px 9%,#e30613 9% 11%,transparent 11% 24%);opacity:.28;filter:blur(.4px);}
 .street-route{position:absolute;right:2rem;bottom:3rem;color:rgba(255,255,255,.28);font-size:.56rem;letter-spacing:.25em;transform:translateX(calc((var(--street-progress) - .5) * 70px));}
-.street-stripe{position:absolute;width:42vw;height:12px;right:-6vw;top:26%;background:#c9ff21;transform-origin:right center;transform:rotate(-8deg) scaleX(calc(.2 + var(--street-progress) * .8));box-shadow:0 0 28px rgba(201,255,33,.12);}
+.street-stripe{position:absolute;width:42vw;height:12px;right:-6vw;top:26%;background:#e30613;transform-origin:right center;transform:rotate(-8deg) scaleX(calc(.2 + var(--street-progress) * .8));box-shadow:0 0 32px rgba(227,6,19,.24);}
 .street-feature-inner{position:relative;z-index:1;grid-template-columns:minmax(0,1.28fr) minmax(280px,.72fr);}
 .street-copy{max-width:520px;}
 .street-copy h2{font-size:clamp(2rem,4vw,4.2rem);text-transform:uppercase;line-height:.94;letter-spacing:-.045em;}
-.street-copy h2 em{color:#c9ff21;font-family:'Syne',sans-serif;font-style:normal;font-weight:800;}
+.street-copy h2 em{display:inline-block;color:#ff2438;font-family:'Rubik Spray Paint','Syne',sans-serif;font-style:normal;font-weight:400;letter-spacing:.01em;text-transform:none;transform:rotate(-2deg);text-shadow:3px 3px 0 rgba(120,0,12,.42);}
 .street-copy p{color:rgba(241,238,230,.62);}
-.street-section-tag{color:#c9ff21;}
-.street-section-tag::before{background:#c9ff21;}
+.street-section-tag{color:#ff2438;}
+.street-section-tag::before{background:#ff2438;}
 .street-meta{border-color:rgba(255,255,255,.16);}
 .street-meta .meta-item label{color:rgba(241,238,230,.38);}
 .street-meta .meta-item span{color:#f1eee6;}
-.street-video-wrap{border-radius:2px;border:1px solid rgba(255,255,255,.16);box-shadow:18px 22px 0 rgba(201,255,33,.12),0 38px 90px rgba(0,0,0,.48);transform:translateY(calc((var(--street-progress) - .5) * -22px)) rotate(calc((var(--street-progress) - .5) * -.7deg));will-change:transform;}
-.street-video-wrap::after{background:linear-gradient(to top,rgba(0,0,0,.55),transparent 48%),linear-gradient(115deg,rgba(201,255,33,.08),transparent 30%);}
-.street-video-badge{color:#0b0c0c;background:#c9ff21;border-radius:0;font-weight:700;}
+.street-video-wrap{border-radius:2px;border:1px solid rgba(255,255,255,.16);box-shadow:18px 22px 0 rgba(227,6,19,.2),0 38px 90px rgba(0,0,0,.56);transform:translateY(calc((var(--street-progress) - .5) * -22px)) rotate(calc((var(--street-progress) - .5) * -.7deg));will-change:transform;}
+.street-video-wrap::after{background:linear-gradient(to top,rgba(0,0,0,.62),transparent 48%),linear-gradient(115deg,rgba(227,6,19,.14),transparent 32%);}
+.street-video-badge{color:#fff;background:#e30613;border-radius:0;font-weight:700;}
 
 /* ── ABOUT ── */
 .about{padding:5rem 2rem;background:var(--bg);border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
@@ -346,7 +347,7 @@ footer{background:var(--footer-bg);color:var(--footer-muted);padding:2rem 2rem;d
   .feat-meta{gap:1.5rem;}
   .street-feature{min-height:auto;padding:5rem 1.5rem;}
   .street-feature-inner{grid-template-columns:1fr;}
-  .street-video-wrap{transform:none;box-shadow:9px 11px 0 rgba(201,255,33,.14),0 28px 60px rgba(0,0,0,.42);}
+  .street-video-wrap{transform:none;box-shadow:9px 11px 0 rgba(227,6,19,.22),0 28px 60px rgba(0,0,0,.5);}
   .street-copy h2{font-size:2.35rem;}
   .street-word{font-size:47vw;bottom:.2em;}
   .street-code{top:2rem;right:1.5rem;}
